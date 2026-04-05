@@ -18,13 +18,8 @@ public class QuizController {
     @Autowired
     private QuizService quizService;
 
-    private static final Logger log = LoggerFactory.getLogger(QuizController.class);
-
-
-
     @PostMapping
     public Quiz create(@RequestBody Quiz quiz){
-        System.out.println("controller"+quiz.getTitle());
         return quizService.add(quiz);
 
     }
